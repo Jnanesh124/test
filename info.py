@@ -10,45 +10,6 @@ def is_enabled(value, default):
     else:
         return default
 
-# Bot information
-SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '1736204'))
-API_HASH = environ.get('API_HASH', '890d40e0f91a4de32dec2965444b2cbe')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
-
-# Bot settings
-CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-
-TeenOfFire
-/
-Testing
-Public
-Code
-Issues
-Pull requests
-Projects
-Wiki
-Security
-Insights
-Settings
-Testing/info.py
-@TeenOfFire
-TeenOfFire Update info.py
- 2 contributors
-71 lines (61 sloc)  9.06 KB
-import re
-from os import environ
-
-id_pattern = re.compile(r'^.\d+$')
-def is_enabled(value, default):
-    if value.lower() in ["true", "yes", "1", "enable", "y"]:
-        return True
-    elif value.lower() in ["false", "no", "0", "disable", "n"]:
-        return False
-    else:
-        return default
-
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '1736204'))
 API_HASH = environ.get('API_HASH', '890d40e0f91a4de32dec2965444b2cbe')
@@ -74,7 +35,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Anurag_files')
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001652564383'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '-1001659058244')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '-5603338518')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
