@@ -122,5 +122,6 @@ async def gen_link_batch(bot, message):
     post = await bot.send_document(LOG_CHANNEL, f"batchmode_{message.from_user.id}.json", file_name="Batch.json", caption="<b>📮Batch File Logs📮</b>")
     os.remove(f"batchmode_{message.from_user.id}.json")
     file_id, ref = unpack_new_file_id(post.document.file_id)
-    await sts.edit(f"<b>🎰 Here Is Your Link👇</b> \n<b>📚Contains </b>`{og_msg}` <b>Files</b>\n https://telegram.me/{temp.U_NAME}?start=BATCH-{file_id}</b>")
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/{temp.U_NAME}?start=BATCH-{file_id}')]])
+    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url=https://telegram.me/{temp.U_NAME}?start=BATCH-{file_id}')]])
+    await message.reply_text(f"<b>🎰 Here Is Your Link👇</b> \n<b>📚Contains </b>`{og_msg}` <b>Files</b>\n https://telegram.me/{temp.U_NAME}?start=BATCH-{file_id}</b>")
+  
