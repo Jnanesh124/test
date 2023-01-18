@@ -126,7 +126,7 @@ async def gen_link_batch(bot, message):
 
 
     buttons = [[
-            InlineKeyboardButton('📲 Share Url 📲', url=f"https://telegram.me/share/url?url=https://telegram.me/{temp.U_NAME}?start=BATCH-{file_id}")
+            InlineKeyboardButton('📲 Share Url 📲', url=f'https://telegram.me/share/url?url=https://telegram.me/{temp.U_NAME}?start=BATCH-{file_id}')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
