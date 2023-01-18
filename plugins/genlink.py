@@ -125,10 +125,4 @@ async def gen_link_batch(bot, message):
     await sts.edit(f"<b>🎰 Here Is Your Link👇</b> \n<b>📚Contains </b>`{og_msg}` <b>Files</b>\n https://telegram.me/{temp.U_NAME}?start=BATCH-{file_id}</b>")
 
 
-    buttons = [[
-            InlineKeyboardButton('📲 Share Url 📲', url=f'https://telegram.me/share/url?url=https://telegram.me/{temp.U_NAME}?start=BATCH-{file_id}')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_text(
-            text=f"<b>🎰 Here Is Your Link👇</b> \n<b>📚Contains </b>`{og_msg}` <b>Files</b>\n https://telegram.me/{temp.U_NAME}?start=BATCH-{file_id}</b>",
-            reply_markup=reply_markup)
+    
