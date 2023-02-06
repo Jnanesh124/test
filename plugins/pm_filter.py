@@ -31,9 +31,6 @@ SPELL_CHECK = {}
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
-    if SELF_DELETE:
-        await asyncio.sleep(SELF_DELETE_SECONDS)
-        await k.delete()
     if k == False:
         await auto_filter(client, message)
 
